@@ -1,0 +1,83 @@
+############################
+
+Caratekit system information
+
+############################
+
+Start time: Wed Apr 22 07:44:55 UTC 2020
+Call executing: caratekit.sh -ws /idia/projects/vela/CARACal_all -cd -si -ct caratekit-test -rp test1 -rm 00 -cs /idia/projects/vela/test_Hao/1547499081a3/default.yml -td /idia/projects/vela/test_Hao/1547499081a3/msdir
+
+############################
+
+Host info: 
+   Static hostname: slwrk-202
+         Icon name: computer-vm
+           Chassis: vm
+    Virtualization: kvm
+  Operating System: Ubuntu 18.04.4 LTS
+            Kernel: Linux 4.15.0-96-generic
+      Architecture: x86-64
+
+##########################################
+
+Files found in test data directory: 1547499081.ms, 1547499081_cal.ms
+Total size of test data directory: 161253 MB
+
+##########################################
+
+Virtualenv info (from pyvenv.cfg):
+home = /opt/anaconda3/bin
+include-system-site-packages = false
+version = 3.7.3
+
+##########################################
+
+Python 3.7.3
+pip 20.0.2
+
+##########################################
+
+CARACal build from master at https://github.com/ska-sa/caracal
+CARACal build: b52ee2f7ff8cf689026deef743937cdc28b679fd
+from: https://github.com/ska-sa/caracal
+CARACal has not been re-build, so this is a guess
+
+Stimela release: 1.4.1
+Stimela build: 41c0bce64be8eda244b04c2365f44d94fdf973cf
+from: https://github.com/ratt-ru/Stimela
+Stimela has not been re-build, so this is a guess
+
+##########################################
+Will not re-create existing stimela-singularity and use old installation.
+Use -f to override and unset -or or --omit-stimela-reinstall flags.
+##########################################
+
+; sya_sing+=$nSingularity image folder size: 21139 MB
+
+
+##########################################
+
+test1 preparation start time:
+Wed Apr 22 07:45:03 UTC 2020
+
+test1 starting to run CARACal:
+Wed Apr 22 08:00:57 UTC 2020
+
+test1 CARACal run end time:
+Wed Apr 22 08:03:16 UTC 2020
+
+CARACal run test1 returned an error.
+
+This CARACal run is logged in /idia/projects/vela/CARACal_all/caratekit-test/test1/output/logs/log-caracal-20200422-100133.txt
+Total number of logfiles: 5
+CARACal logfile indicates 3 workers starting
+and 2 workers ending.
+
+Workers starting (3) and ending (2) are unequal in log-caracal.txt
+
+CARACal run test1 returned a faulty output.
+
+############
+
+Test failed.
+

@@ -1,0 +1,26 @@
+workspace=/idia/projects/vela/CARACal_all
+caracal_test_id=caratekit-test
+workspace_root=${workspace}/${caracal_test_id}
+cvirtualenv=${workspace_root}/caracal_venv
+HOME_OLD=${HOME}
+
+mkdir -p ${workspace_root}
+export HOME=${workspace_root}/home
+rm -rf ${WORKSPACE_ROOT}/home
+mkdir -p ${workspace_root}/home
+cd ${HOME}
+rm -rf ${cvirtualenv}
+python3 -m venv ${cvirtualenv}
+. ${cvirtualenv}/bin/activate
+export PYTHONPATH=''
+pip install pip setuptools wheel -U
+rm -rf ${workspace_root}/caracal
+cd ${workspace_root}
+git clone https://github.com/ska-sa/caracal.git
+pip install -U --force-reinstall ${workspace_root}/caracal
+rm -f ${HOME}/.stimela/*
+rm -rf ${workspace_root}/stimela-singularity
+mkdir -p ${workspace_root}/stimela-singularity
+stimela pull --singularity -f --pull-folder ${workspace_root}/stimela-singularity
+
+export HOME=${OLD_HOME}

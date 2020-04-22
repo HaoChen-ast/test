@@ -1,0 +1,448 @@
+2020-04-22 10:01:30 CARACal INFO: Version 0.3.1 installed at /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/caracal
+2020-04-22 10:01:30 CARACal INFO: Loaded pipeline configuration from default.yml
+2020-04-22 10:01:30 CARACal INFO: 
+2020-04-22 10:01:30 CARACal INFO:   general:
+2020-04-22 10:01:30 CARACal INFO:     data_path:                    
+2020-04-22 10:01:30 CARACal INFO:     msdir:                        msdir
+2020-04-22 10:01:30 CARACal INFO:     input:                        input
+2020-04-22 10:01:30 CARACal INFO:     output:                       output
+2020-04-22 10:01:30 CARACal INFO:     prefix:                       mypipelinerun
+2020-04-22 10:01:30 CARACal INFO:     init_pipeline:                True
+2020-04-22 10:01:30 CARACal INFO:     init_notebooks:               ['std-progress-report']
+2020-04-22 10:01:30 CARACal INFO: 
+2020-04-22 10:01:30 CARACal INFO:   get_data:
+2020-04-22 10:01:30 CARACal INFO:     dataid:                       ['1547499081', '1547499081_cal']
+2020-04-22 10:01:30 CARACal INFO: 
+2020-04-22 10:01:30 CARACal INFO:   observation_config:
+2020-04-22 10:01:30 CARACal INFO:     target:                       ['all']
+2020-04-22 10:01:30 CARACal INFO:     gcal:                         ['all']
+2020-04-22 10:01:30 CARACal INFO:     bpcal:                        ['longest']
+2020-04-22 10:01:30 CARACal INFO:     fcal:                         ['longest']
+2020-04-22 10:01:30 CARACal INFO:     xcal:                         ['longest']
+2020-04-22 10:01:30 CARACal INFO:     reference_antenna:            0
+2020-04-22 10:01:30 CARACal INFO:     obsinfo:
+2020-04-22 10:01:30 CARACal INFO:       enable:                       True
+2020-04-22 10:01:30 CARACal INFO:       listobs:                      True
+2020-04-22 10:01:30 CARACal INFO:       summary_json:                 True
+2020-04-22 10:01:30 CARACal INFO:       vampirisms:                   False
+2020-04-22 10:01:30 CARACal INFO: 
+2020-04-22 10:01:30 CARACal INFO:   transform_data__2:
+2020-04-22 10:01:30 CARACal INFO:     enable:                       True
+2020-04-22 10:01:30 CARACal INFO:     label_in:                     
+2020-04-22 10:01:30 CARACal INFO:     label_out:                    corr
+2020-04-22 10:01:30 CARACal INFO:     split_field:
+2020-04-22 10:01:30 CARACal INFO:       enable:                       True
+2020-04-22 10:01:30 CARACal INFO:       field:                        target
+2020-04-22 10:01:30 CARACal INFO:       time_average:                 
+2020-04-22 10:01:30 CARACal INFO:       freq_average:                 1
+2020-04-22 10:01:30 CARACal INFO:       column:                       corrected
+2020-04-22 10:01:30 CARACal INFO:       correlation:                  
+2020-04-22 10:01:30 CARACal INFO:       usewtspectrum:                True
+2020-04-22 10:01:30 CARACal INFO:       spw:                          
+2020-04-22 10:01:30 CARACal INFO:       otfcal:
+2020-04-22 10:01:30 CARACal INFO:         enable:                       True
+2020-04-22 10:01:30 CARACal INFO:         callib:                       
+2020-04-22 10:01:30 CARACal INFO:         label_cal:                    1gc1
+2020-04-22 10:01:30 CARACal INFO:         apply_delay_cal:
+2020-04-22 10:01:30 CARACal INFO:           enable:                       True
+2020-04-22 10:01:30 CARACal INFO:           field:                        ['bpcal']
+2020-04-22 10:01:30 CARACal INFO:         apply_bp_cal:
+2020-04-22 10:01:30 CARACal INFO:           enable:                       True
+2020-04-22 10:01:30 CARACal INFO:           field:                        ['bpcal']
+2020-04-22 10:01:30 CARACal INFO:         apply_transfer_fluxscale:
+2020-04-22 10:01:30 CARACal INFO:           enable:                       True
+2020-04-22 10:01:30 CARACal INFO:           field:                        ['gcal']
+2020-04-22 10:01:30 CARACal INFO:     obsinfo:
+2020-04-22 10:01:30 CARACal INFO:       enable:                       True
+2020-04-22 10:01:30 CARACal INFO:       listobs:                      True
+2020-04-22 10:01:30 CARACal INFO:       summary_json:                 True
+2020-04-22 10:01:30 CARACal INFO: Obtaining divine knowledge from: /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/caracal/data/southern_calibrators.txt
+2020-04-22 10:01:50 CARACal INFO: output directory for logs is output/logs-20200422-100133
+2020-04-22 10:01:50 CARACal INFO: output/logs links to logs-20200422-100133
+2020-04-22 10:01:50 CARACal INFO: output/logs-20200422-100133/log-caracal-20200422-100133.txt links to ../log-caracal-20200422-100133.txt
+2020-04-22 10:01:50 CARACal INFO: output/log-caracal.txt links to log-caracal-20200422-100133.txt
+2020-04-22 10:01:50 CARACal INFO: Copying meerkat input files into input folder
+2020-04-22 10:01:53 CARACal INFO: Copying fields for masking into input folder
+2020-04-22 10:01:53 CARACal INFO: Creating standard notebook output/std-progress-report.ipynb
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: Config directory cannot be found. Will create ./stimela_parameter_files
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: ---------------------------------
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: Stimela version 1.4.1
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: Sphesihle Makhathini <sphemakh@gmail.com>
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: Running: get_data
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: ---------------------------------
+2020-04-22 10:01:53 CARACal INFO: get_data: initializing
+2020-04-22 10:01:53 CARACal INFO: get_data: running
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: Saving pipeline information in .last_get_data.json
+2020-04-22 10:01:53 CARACal.Stimela.get_data INFO: Recipe executed successfully
+2020-04-22 10:01:53 CARACal INFO: get_data: finished
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: ---------------------------------
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: Stimela version 1.4.1
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: Sphesihle Makhathini <sphemakh@gmail.com>
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: Running: observation_config
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: ---------------------------------
+2020-04-22 10:01:53 CARACal INFO: observation_config: initializing
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [stimela_parameter_files/listobs_0-1400516386120161587542513601396.json] in container [listobs_0-1400516386120161587542513601396] at [/stimela_mount/configfile]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/casa_listobs/src] in container [listobs_0-1400516386120161587542513601396] at [/stimela_mount/code]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript] in container [listobs_0-1400516386120161587542513601396] at [/singularity]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [CONFIG=/stimela_mount/configfile] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_CONFIG=/stimela_mount/configfile on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [HOME=/stimela_mount/output] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_HOME=/stimela_mount/output on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [STIMELA_MOUNT=/stimela_mount] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_STIMELA_MOUNT=/stimela_mount on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [msdir] in container [listobs_0-1400516386120161587542513601396] at [/stimela_mount/msdir]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [MSDIR=/stimela_mount/msdir] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_MSDIR=/stimela_mount/msdir on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume 'msdir' from local file system to '/stimela_mount/msdir' in the container
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [input] in container [listobs_0-1400516386120161587542513601396] at [/stimela_mount/input]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [INPUT=/stimela_mount/input] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_INPUT=/stimela_mount/input on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume 'input' from local file system to '/stimela_mount/input' in the container
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [output] in container [listobs_0-1400516386120161587542513601396] at [/stimela_mount/output]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [OUTPUT=/stimela_mount/output] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_OUTPUT=/stimela_mount/output on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume [output/tmp] in container [listobs_0-1400516386120161587542513601396] at [/stimela_mount/output/tmp]
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Adding environ varaible [TMPDIR=/stimela_mount/output/tmp] in container listobs_0-1400516386120161587542513601396
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_TMPDIR=/stimela_mount/output/tmp on host
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 DEBUG: Mounting volume 'output' from local file system to '/stimela_mount/output' in the container
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: Adding cab '/idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_casa_1.2.5.sif' to recipe. The container will be named 'listobs_0'
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [stimela_parameter_files/summary_json_0-14005163898494415875425137143967.json] in container [summary_json_0-14005163898494415875425137143967] at [/stimela_mount/configfile]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/msutils/src] in container [summary_json_0-14005163898494415875425137143967] at [/stimela_mount/code]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript] in container [summary_json_0-14005163898494415875425137143967] at [/singularity]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [CONFIG=/stimela_mount/configfile] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_CONFIG=/stimela_mount/configfile on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [HOME=/stimela_mount/output] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_HOME=/stimela_mount/output on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [STIMELA_MOUNT=/stimela_mount] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_STIMELA_MOUNT=/stimela_mount on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [msdir] in container [summary_json_0-14005163898494415875425137143967] at [/stimela_mount/msdir]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [MSDIR=/stimela_mount/msdir] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_MSDIR=/stimela_mount/msdir on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume 'msdir' from local file system to '/stimela_mount/msdir' in the container
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [input] in container [summary_json_0-14005163898494415875425137143967] at [/stimela_mount/input]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [INPUT=/stimela_mount/input] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_INPUT=/stimela_mount/input on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume 'input' from local file system to '/stimela_mount/input' in the container
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [output] in container [summary_json_0-14005163898494415875425137143967] at [/stimela_mount/output]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [OUTPUT=/stimela_mount/output] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_OUTPUT=/stimela_mount/output on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume [output/tmp] in container [summary_json_0-14005163898494415875425137143967] at [/stimela_mount/output/tmp]
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Adding environ varaible [TMPDIR=/stimela_mount/output/tmp] in container summary_json_0-14005163898494415875425137143967
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Setting singularity environmental variable SINGULARITYENV_TMPDIR=/stimela_mount/output/tmp on host
+2020-04-22 10:01:53 CARACal.Stimela.summary_json_0 DEBUG: Mounting volume 'output' from local file system to '/stimela_mount/output' in the container
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: Adding cab '/idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_msutils_1.2.5-2.sif' to recipe. The container will be named 'summary_json_0'
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 INFO: job started at 2020-04-22 10:01:53.769114
+2020-04-22 10:01:53 CARACal.Stimela.observation_config INFO: STEP 1 :: listobs_0:: Get observation information ms=1547499081.ms
+2020-04-22 10:01:53 CARACal.Stimela INFO: Validating parameters...       CAB = casa_listobs
+2020-04-22 10:01:53 CARACal.Stimela DEBUG: Validating parameter overwrite
+2020-04-22 10:01:53 CARACal.Stimela INFO: Parameters validated and saved. Parameter file is: stimela_parameter_files/listobs_0-1400516386120161587542513601396.json
+2020-04-22 10:01:53 CARACal.Stimela.listobs_0 INFO: Starting container [listobs_0-1400516386120161587542513601396]. Timeout set to -1. The container ID is printed below.
+# running singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/listobs_0-1400516386120161587542513601396.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/casa_listobs/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_casa_1.2.5.sif /singularity
+2020-04-22 10:01:58 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:03 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:04 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 
+2020-04-22 10:02:09 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# =========================================
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# The start-up time of CASA may vary
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# depending on whether the shared libraries
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# are cached or not.
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# =========================================
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 
+2020-04-22 10:02:12 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# /casa-pipeline-release-5.6.1-8.el7/lib/python2.7/site-packages/IPython/core/interactiveshell.py:724: UserWarning: Attempting to work in a virtualenv. If you encounter problems, please install IPython inside the virtualenv.
+2020-04-22 10:02:17 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:20 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+#   warn("Attempting to work in a virtualenv. If you encounter problems, please "
+2020-04-22 10:02:20 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# Python: caratekit-test/test1IPython 5.1.0 -- An enhanced Interactive Python.
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# PIPELINE CASA 5.6.1-8   -- Common Astronomy Software Applications
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# Creating a new telemetry file
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# Telemetry initialized. Telemetry will send anonymized usage statistics to NRAO.
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# You can disable telemetry by adding the following line to your ~/.casarc file:
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# EnableTelemetry: False
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:21	INFO	::casa	CASA Version PIPELINE 5.6.1-8
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# --> CrashReporter initialized.
+2020-04-22 10:02:25 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::+	##########################################
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::+	##### Begin Task: listobs            #####
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::	listobs(vis="/stimela_mount/msdir/1547499081.ms",selectdata=True,spw="",field="",antenna="",
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::+	        uvrange="",timerange="",correlation="",scan="",intent="",
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::+	        feed="",array="",observation="",verbose=True,listfile="/stimela_mount/output/1547499081-obsinfo.txt",
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:25	INFO	listobs::::+	        listunfl=False,cachesize=50,overwrite=True)
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:29	INFO	listobs::ms::summary	Writing output to file: /stimela_mount/output/1547499081-obsinfo.txt
+2020-04-22 10:02:28 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:29	INFO	listobs::MSMetaData::_computeScanAndSubScanProperties 	Computing scan and subscan properties...
+2020-04-22 10:02:30 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:30	INFO	listobs::::	##### End Task: listobs              #####
+2020-04-22 10:02:30 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [10]
+2020-04-22 10:02:31 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+# 2020-04-22 08:02:30	INFO	listobs::::+	##########################################
+2020-04-22 10:02:31 CARACal.Stimela.listobs_0 DEBUG: poll(): ready to read: [8]
+2020-04-22 10:02:31 CARACal.Stimela.listobs_0 DEBUG: The singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/listobs_0-1400516386120161587542513601396.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/casa_listobs/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_casa_1.2.5.sif /singularity process has exited
+2020-04-22 10:02:31 CARACal.Stimela.listobs_0 INFO: job complete at 2020-04-22 10:02:31.965881 after 0:00:38.196767
+2020-04-22 10:02:31 CARACal.Stimela.summary_json_0 INFO: job started at 2020-04-22 10:02:31.966048
+2020-04-22 10:02:31 CARACal.Stimela.observation_config INFO: STEP 2 :: summary_json_0:: Get observation information as a json file ms=1547499081.ms
+2020-04-22 10:02:31 CARACal.Stimela INFO: Validating parameters...       CAB = msutils
+2020-04-22 10:02:31 CARACal.Stimela DEBUG: Validating parameter command
+2020-04-22 10:02:31 CARACal.Stimela DEBUG: Validating parameter display
+2020-04-22 10:02:31 CARACal.Stimela INFO: Parameters validated and saved. Parameter file is: stimela_parameter_files/summary_json_0-14005163898494415875425137143967.json
+2020-04-22 10:02:31 CARACal.Stimela.summary_json_0 INFO: Starting container [summary_json_0-14005163898494415875425137143967]. Timeout set to -1. The container ID is printed below.
+# running singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/summary_json_0-14005163898494415875425137143967.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/msutils/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_msutils_1.2.5-2.sif /singularity
+2020-04-22 10:02:36 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:41 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:46 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:51 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:56 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: []
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081.ms: 24 columns, 7905744 rows
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9, 11]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081.ms::FIELD: 9 columns, 13 rows
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081.ms::SPECTRAL_WINDOW: 14 columns, 1 rows
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081.ms::ANTENNA: 8 columns, 62 rows
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081.ms::STATE: 7 columns, 4 rows
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081.ms::POLARIZATION: 4 columns, 1 rows
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: poll(): ready to read: [9]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 DEBUG: The singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/summary_json_0-14005163898494415875425137143967.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/msutils/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_msutils_1.2.5-2.sif /singularity process has exited
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_0 INFO: job complete at 2020-04-22 10:02:58.874809 after 0:00:26.908761
+2020-04-22 10:02:58 CARACal.Stimela.observation_config INFO: Saving pipeline information in .last_observation_config.json
+2020-04-22 10:02:58 CARACal.Stimela.observation_config INFO: Recipe executed successfully
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [stimela_parameter_files/listobs_1-14005163861201615875425788765643.json] in container [listobs_1-14005163861201615875425788765643] at [/stimela_mount/configfile]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/casa_listobs/src] in container [listobs_1-14005163861201615875425788765643] at [/stimela_mount/code]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript] in container [listobs_1-14005163861201615875425788765643] at [/singularity]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [CONFIG=/stimela_mount/configfile] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_CONFIG=/stimela_mount/configfile on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [HOME=/stimela_mount/output] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_HOME=/stimela_mount/output on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [STIMELA_MOUNT=/stimela_mount] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_STIMELA_MOUNT=/stimela_mount on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [msdir] in container [listobs_1-14005163861201615875425788765643] at [/stimela_mount/msdir]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [MSDIR=/stimela_mount/msdir] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_MSDIR=/stimela_mount/msdir on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume 'msdir' from local file system to '/stimela_mount/msdir' in the container
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [input] in container [listobs_1-14005163861201615875425788765643] at [/stimela_mount/input]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [INPUT=/stimela_mount/input] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_INPUT=/stimela_mount/input on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume 'input' from local file system to '/stimela_mount/input' in the container
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [output] in container [listobs_1-14005163861201615875425788765643] at [/stimela_mount/output]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [OUTPUT=/stimela_mount/output] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_OUTPUT=/stimela_mount/output on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume [output/tmp] in container [listobs_1-14005163861201615875425788765643] at [/stimela_mount/output/tmp]
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Adding environ varaible [TMPDIR=/stimela_mount/output/tmp] in container listobs_1-14005163861201615875425788765643
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_TMPDIR=/stimela_mount/output/tmp on host
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 DEBUG: Mounting volume 'output' from local file system to '/stimela_mount/output' in the container
+2020-04-22 10:02:58 CARACal.Stimela.observation_config INFO: Adding cab '/idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_casa_1.2.5.sif' to recipe. The container will be named 'listobs_1'
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [stimela_parameter_files/summary_json_1-14005163898494415875425788934498.json] in container [summary_json_1-14005163898494415875425788934498] at [/stimela_mount/configfile]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/msutils/src] in container [summary_json_1-14005163898494415875425788934498] at [/stimela_mount/code]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript] in container [summary_json_1-14005163898494415875425788934498] at [/singularity]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [CONFIG=/stimela_mount/configfile] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_CONFIG=/stimela_mount/configfile on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [HOME=/stimela_mount/output] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_HOME=/stimela_mount/output on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [STIMELA_MOUNT=/stimela_mount] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_STIMELA_MOUNT=/stimela_mount on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [msdir] in container [summary_json_1-14005163898494415875425788934498] at [/stimela_mount/msdir]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [MSDIR=/stimela_mount/msdir] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_MSDIR=/stimela_mount/msdir on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume 'msdir' from local file system to '/stimela_mount/msdir' in the container
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [input] in container [summary_json_1-14005163898494415875425788934498] at [/stimela_mount/input]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [INPUT=/stimela_mount/input] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_INPUT=/stimela_mount/input on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume 'input' from local file system to '/stimela_mount/input' in the container
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [output] in container [summary_json_1-14005163898494415875425788934498] at [/stimela_mount/output]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [OUTPUT=/stimela_mount/output] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_OUTPUT=/stimela_mount/output on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume [output/tmp] in container [summary_json_1-14005163898494415875425788934498] at [/stimela_mount/output/tmp]
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Adding environ varaible [TMPDIR=/stimela_mount/output/tmp] in container summary_json_1-14005163898494415875425788934498
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Setting singularity environmental variable SINGULARITYENV_TMPDIR=/stimela_mount/output/tmp on host
+2020-04-22 10:02:58 CARACal.Stimela.summary_json_1 DEBUG: Mounting volume 'output' from local file system to '/stimela_mount/output' in the container
+2020-04-22 10:02:58 CARACal.Stimela.observation_config INFO: Adding cab '/idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_msutils_1.2.5-2.sif' to recipe. The container will be named 'summary_json_1'
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 INFO: job started at 2020-04-22 10:02:58.924792
+2020-04-22 10:02:58 CARACal.Stimela.observation_config INFO: STEP 1 :: listobs_1:: Get observation information ms=1547499081_cal.ms
+2020-04-22 10:02:58 CARACal.Stimela INFO: Validating parameters...       CAB = casa_listobs
+2020-04-22 10:02:58 CARACal.Stimela DEBUG: Validating parameter overwrite
+2020-04-22 10:02:58 CARACal.Stimela INFO: Parameters validated and saved. Parameter file is: stimela_parameter_files/listobs_1-14005163861201615875425788765643.json
+2020-04-22 10:02:58 CARACal.Stimela.listobs_1 INFO: Starting container [listobs_1-14005163861201615875425788765643]. Timeout set to -1. The container ID is printed below.
+# running singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/listobs_1-14005163861201615875425788765643.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/casa_listobs/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_casa_1.2.5.sif /singularity
+2020-04-22 10:02:59 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# =========================================
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# The start-up time of CASA may vary
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# depending on whether the shared libraries
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# are cached or not.
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# =========================================
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 
+2020-04-22 10:03:00 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# /casa-pipeline-release-5.6.1-8.el7/lib/python2.7/site-packages/IPython/core/interactiveshell.py:724: UserWarning: Attempting to work in a virtualenv. If you encounter problems, please install IPython inside the virtualenv.
+2020-04-22 10:03:02 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+#   warn("Attempting to work in a virtualenv. If you encounter problems, please "
+2020-04-22 10:03:02 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# Python: caratekit-test/test1IPython 5.1.0 -- An enhanced Interactive Python.
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# PIPELINE CASA 5.6.1-8   -- Common Astronomy Software Applications
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# Found an existing telemetry logfile: /stimela_home/.casa/casastats-561-8-2ee42bae617920a-20200422-080220-PIPELINE.log
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# Telemetry initialized. Telemetry will send anonymized usage statistics to NRAO.
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# You can disable telemetry by adding the following line to your ~/.casarc file:
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# EnableTelemetry: False
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:02	INFO	::casa	CASA Version PIPELINE 5.6.1-8
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# --> CrashReporter initialized.
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::+	##########################################
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::+	##### Begin Task: listobs            #####
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::	listobs(vis="/stimela_mount/msdir/1547499081_cal.ms",selectdata=True,spw="",field="",antenna="",
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::+	        uvrange="",timerange="",correlation="",scan="",intent="",
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::+	        feed="",array="",observation="",verbose=True,listfile="/stimela_mount/output/1547499081_cal-obsinfo.txt",
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::+	        listunfl=False,cachesize=50,overwrite=True)
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::ms::summary	Writing output to file: /stimela_mount/output/1547499081_cal-obsinfo.txt
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::MSMetaData::_computeScanAndSubScanProperties 	Computing scan and subscan properties...
+2020-04-22 10:03:04 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::	##### End Task: listobs              #####
+2020-04-22 10:03:05 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [12]
+2020-04-22 10:03:06 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+# 2020-04-22 08:03:05	INFO	listobs::::+	##########################################
+2020-04-22 10:03:06 CARACal.Stimela.listobs_1 DEBUG: poll(): ready to read: [10]
+2020-04-22 10:03:06 CARACal.Stimela.listobs_1 DEBUG: The singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/listobs_1-14005163861201615875425788765643.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/casa_listobs/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_casa_1.2.5.sif /singularity process has exited
+2020-04-22 10:03:06 CARACal.Stimela.listobs_1 INFO: job complete at 2020-04-22 10:03:06.565841 after 0:00:07.641049
+2020-04-22 10:03:06 CARACal.Stimela.summary_json_1 INFO: job started at 2020-04-22 10:03:06.566028
+2020-04-22 10:03:06 CARACal.Stimela.observation_config INFO: STEP 2 :: summary_json_1:: Get observation information as a json file ms=1547499081_cal.ms
+2020-04-22 10:03:06 CARACal.Stimela INFO: Validating parameters...       CAB = msutils
+2020-04-22 10:03:06 CARACal.Stimela DEBUG: Validating parameter command
+2020-04-22 10:03:06 CARACal.Stimela DEBUG: Validating parameter display
+2020-04-22 10:03:06 CARACal.Stimela INFO: Parameters validated and saved. Parameter file is: stimela_parameter_files/summary_json_1-14005163898494415875425788934498.json
+2020-04-22 10:03:06 CARACal.Stimela.summary_json_1 INFO: Starting container [summary_json_1-14005163898494415875425788934498]. Timeout set to -1. The container ID is printed below.
+# running singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/summary_json_1-14005163898494415875425788934498.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/msutils/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_msutils_1.2.5-2.sif /singularity
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081_cal.ms: 26 columns, 472626 rows
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11, 13]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081_cal.ms::FIELD: 9 columns, 2 rows
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081_cal.ms::SPECTRAL_WINDOW: 14 columns, 1 rows
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081_cal.ms::ANTENNA: 8 columns, 62 rows
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081_cal.ms::STATE: 7 columns, 4 rows
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11]
+# Successful readonly open of default-locked table /stimela_mount/msdir/1547499081_cal.ms::POLARIZATION: 4 columns, 1 rows
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: poll(): ready to read: [11]
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 DEBUG: The singularity run --workdir /stimela_mount/output --home /idia/projects/vela/CARACal_all/caratekit-test/home:/stimela_home  --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/stimela_parameter_files/summary_json_1-14005163898494415875425788934498.json:/stimela_mount/configfile:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/stimela/cargo/cab/msutils/src:/stimela_mount/code:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/bin/stimela_runscript:/singularity:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/msdir:/stimela_mount/msdir:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/input:/stimela_mount/input:ro --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output:/stimela_mount/output:rw --bind /idia/projects/vela/CARACal_all/caratekit-test/test1/output/tmp:/stimela_mount/output/tmp:rw /idia/projects/vela/CARACal_all/caratekit-test/stimela-singularity/stimela_msutils_1.2.5-2.sif /singularity process has exited
+2020-04-22 10:03:08 CARACal.Stimela.summary_json_1 INFO: job complete at 2020-04-22 10:03:08.958721 after 0:00:02.392693
+2020-04-22 10:03:08 CARACal.Stimela.observation_config INFO: Saving pipeline information in .last_observation_config.json
+2020-04-22 10:03:08 CARACal.Stimela.observation_config INFO: Recipe executed successfully
+2020-04-22 10:03:08 CARACal INFO: Extracting info from output/1547499081-obsinfo.json and (if present, and only for the purpose of automatically setting the reference antenna) the metadata file /idia/projects/vela/CARACal_all/caratekit-test/test1/1547499081-obsinfo.json
+2020-04-22 10:03:09 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-04-22 10:03:09 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-04-22 10:03:09 CARACal INFO: ====================================
+2020-04-22 10:03:09 CARACal INFO: TARGET
+2020-04-22 10:03:09 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:10 CARACal INFO: T29R03C01 (ID=2) : 54.78 minutes | RA=142.50 deg, Dec=-52.60 deg
+2020-04-22 10:03:10 CARACal INFO: T29R03C03 (ID=3) : 52.91 minutes | RA=141.33 deg, Dec=-51.91 deg
+2020-04-22 10:03:10 CARACal INFO: T29R03C05 (ID=4) : 52.38 minutes | RA=140.20 deg, Dec=-51.22 deg
+2020-04-22 10:03:11 CARACal INFO: T29R04C02 (ID=5) : 52.24 minutes | RA=141.35 deg, Dec=-52.61 deg
+2020-04-22 10:03:11 CARACal INFO: T29R04C04 (ID=6) : 52.51 minutes | RA=140.20 deg, Dec=-51.92 deg
+2020-04-22 10:03:12 CARACal INFO: T29R04C06 (ID=7) : 52.51 minutes | RA=139.09 deg, Dec=-51.21 deg
+2020-04-22 10:03:12 CARACal INFO: T30R00C02 (ID=8) : 52.78 minutes | RA=140.20 deg, Dec=-49.12 deg
+2020-04-22 10:03:12 CARACal INFO: T30R00C04 (ID=9) : 49.58 minutes | RA=139.15 deg, Dec=-48.42 deg
+2020-04-22 10:03:13 CARACal INFO: T30R00C06 (ID=10) : 50.11 minutes | RA=138.13 deg, Dec=-47.71 deg
+2020-04-22 10:03:13 CARACal INFO: ====================================
+2020-04-22 10:03:13 CARACal INFO: CALIBRATE_AMPL,CALIBRATE_PHASE
+2020-04-22 10:03:13 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:13 CARACal INFO: J0825-5010 (ID=1) : 15.19 minutes | RA=126.36 deg, Dec=-50.18 deg
+2020-04-22 10:03:13 CARACal INFO: ====================================
+2020-04-22 10:03:13 CARACal INFO: CALIBRATE_FLUX
+2020-04-22 10:03:13 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:14 CARACal INFO: J0408-6545 (ID=0) : 14.26 minutes | RA=62.08 deg, Dec=-65.75 deg
+2020-04-22 10:03:14 CARACal INFO: ====================================
+2020-04-22 10:03:14 CARACal INFO: CALIBRATE_BANDPASS
+2020-04-22 10:03:14 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:14 CARACal INFO: J0408-6545 (ID=0) : 14.26 minutes | RA=62.08 deg, Dec=-65.75 deg
+2020-04-22 10:03:14 CARACal INFO: Extracting info from output/1547499081_cal-obsinfo.json and (if present, and only for the purpose of automatically setting the reference antenna) the metadata file /idia/projects/vela/CARACal_all/caratekit-test/test1/1547499081_cal-obsinfo.json
+2020-04-22 10:03:15 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-04-22 10:03:15 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-04-22 10:03:15 CARACal INFO: ====================================
+2020-04-22 10:03:15 CARACal INFO: CALIBRATE_AMPL,CALIBRATE_PHASE
+2020-04-22 10:03:15 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:15 CARACal INFO: J0825-5010 (ID=1) : 15.19 minutes | RA=126.36 deg, Dec=-50.18 deg
+2020-04-22 10:03:15 CARACal INFO: ====================================
+2020-04-22 10:03:15 CARACal INFO: CALIBRATE_FLUX
+2020-04-22 10:03:15 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:16 CARACal INFO: J0408-6545 (ID=0) : 14.26 minutes | RA=62.08 deg, Dec=-65.75 deg
+2020-04-22 10:03:16 CARACal INFO: ====================================
+2020-04-22 10:03:16 CARACal INFO: CALIBRATE_BANDPASS
+2020-04-22 10:03:16 CARACal INFO:  ---------------------------------- 
+2020-04-22 10:03:16 CARACal INFO: J0408-6545 (ID=0) : 14.26 minutes | RA=62.08 deg, Dec=-65.75 deg
+2020-04-22 10:03:16 CARACal INFO: observation_config: running
+2020-04-22 10:03:16 CARACal.Stimela.observation_config INFO: Saving pipeline information in .last_observation_config.json
+2020-04-22 10:03:16 CARACal.Stimela.observation_config INFO: Recipe executed successfully
+2020-04-22 10:03:16 CARACal INFO: observation_config: finished
+2020-04-22 10:03:16 CARACal.Stimela.split_target INFO: ---------------------------------
+2020-04-22 10:03:16 CARACal.Stimela.split_target INFO: Stimela version 1.4.1
+2020-04-22 10:03:16 CARACal.Stimela.split_target INFO: Sphesihle Makhathini <sphemakh@gmail.com>
+2020-04-22 10:03:16 CARACal.Stimela.split_target INFO: Running: split_target
+2020-04-22 10:03:16 CARACal.Stimela.split_target INFO: ---------------------------------
+2020-04-22 10:03:16 CARACal INFO: split_target: initializing
+2020-04-22 10:03:16 CARACal ERROR: [Errno 2] No such file or directory: 'output/caltables/callibs/callib_mypipelinerun-1547499081-1gc1.json' [FileNotFoundError]
+2020-04-22 10:03:16 CARACal INFO:   More information can be found in the logfile at output/log-caracal-20200422-100133.txt
+2020-04-22 10:03:16 CARACal INFO:   You are running version 0.3.1
+2020-04-22 10:03:16 CARACal ERROR: Traceback (most recent call last):
+2020-04-22 10:03:16 CARACal ERROR:   File "/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/caracal/main.py", line 240, in __run
+2020-04-22 10:03:16 CARACal ERROR:     pipeline.run_workers()
+2020-04-22 10:03:16 CARACal ERROR:   File "/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/caracal/workers/worker_administrator.py", line 325, in run_workers
+2020-04-22 10:03:16 CARACal ERROR:     worker.worker(self, recipe, config)
+2020-04-22 10:03:16 CARACal ERROR:   File "/idia/projects/vela/CARACal_all/caratekit-test/caracal_venv/lib/python3.7/site-packages/caracal/workers/transform_data_worker.py", line 125, in worker
+2020-04-22 10:03:16 CARACal ERROR:     config['split_field']['otfcal'].get('label_cal')))) as f:
+2020-04-22 10:03:16 CARACal ERROR: FileNotFoundError: [Errno 2] No such file or directory: 'output/caltables/callibs/callib_mypipelinerun-1547499081-1gc1.json'
+2020-04-22 10:03:16 CARACal INFO: exiting with error code 1

@@ -1,0 +1,58 @@
+############################
+
+Caratekit system information
+
+############################
+
+Start time: Wed Apr 22 06:37:11 UTC 2020
+Call executing: caratekit.sh -ws /idia/projects/vela/CARACal_all -si -ct caratekit-test -rp install -f
+
+############################
+
+Host info: 
+   Static hostname: slwrk-202
+         Icon name: computer-vm
+           Chassis: vm
+    Virtualization: kvm
+  Operating System: Ubuntu 18.04.4 LTS
+            Kernel: Linux 4.15.0-96-generic
+      Architecture: x86-64
+
+##########################################
+
+Virtualenv info (from pyvenv.cfg):
+home = /opt/anaconda3/bin
+include-system-site-packages = false
+version = 3.7.3
+
+##########################################
+
+Python 3.7.3
+pip 20.0.2
+
+##########################################
+
+CARACal build from master at https://github.com/ska-sa/caracal
+CARACal build: b52ee2f7ff8cf689026deef743937cdc28b679fd
+from: https://github.com/ska-sa/caracal
+
+Stimela release: 1.4.1
+Stimela build: 41c0bce64be8eda244b04c2365f44d94fdf973cf
+from: https://github.com/ratt-ru/Stimela
+
+##########################################
+
+Singularity version: singularity version 3.5.2
+
+Singularity image folder size: 21139 MB
+
+
+###############
+
+Test succeeded.
+
+##########################################
+
+ End time: Wed Apr 22 07:32:16 UTC 2020
+
+##########################################
