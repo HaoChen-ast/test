@@ -1,0 +1,357 @@
+schema_version: 0.3.1 # following https://github.com/paoloserra/GPS-data-reduction/blob/master/caracal_config_files/T29R03C01_paolo_2020may21.yml
+
+general:
+  title: GPS # V0
+  rawdatadir: '' # V0 ?
+  msdir: msdir
+  input: input
+  output: output
+  prefix: V0
+  final_report: false
+
+getdata:
+  dataid: ['1547413577_sdp_l0']
+
+obsconf:
+  obsinfo:
+    enable: true
+  target:
+    - all # V0
+  fcal:
+    - 'longest'
+  bpcal:
+    - 'longest'
+  gcal:
+    - 'all'
+  xcal:
+    - 'longest'
+  refant: 'm032'
+  
+transform:
+  enable: true
+  label_in: ''
+  label_out: cal
+  split_field:
+    enable: true
+    field: 'calibrators'
+    time_avg: ''
+    chan_avg: 1
+    col: data
+    correlation: ''
+    spw: ''
+    otfcal:
+      enable: false
+  obsinfo:
+    enable: true
+    listobs: true
+
+prep:
+  enable: true
+  label_in: cal
+  field: calibrators
+  manage_flags:
+    enable: true
+    mode: legacy
+  specweights:
+    enable: true
+    mode: uniform
+
+flag__legacysummary:
+  enable: true
+  field: calibrators
+  label_in: cal
+  summary:
+    enable: true
+
+flag__static:
+  enable: true
+  field: calibrators 
+  label_in: cal
+  rewind_flags:
+    enable: true
+  flag_quack:
+    enable: true
+    interval: 7
+    mode: beg
+  flag_autocorr:
+    enable: true
+  flag_shadow:
+    enable: true
+  flag_spw:
+    enable: true
+    chans: '*:1419.4~1421.4MHz' # 533 (1419.36MHz, 220.8km/s) ~ 543 (1421.45MHz, -220.2km/s)
+  summary:
+    enable: true
+
+flag__gcal: # V0, a12 ???wait for a12_3 results first.
+  enable: true
+  field: calibrators 
+  label_in: cal
+  calfields: gcal
+  rewind_flags:
+    enable: false
+    version: gps_flagging__2_before
+  flag_rfi:
+    enable: true
+    col: DATA
+    flagger: tricolour
+    tricolour:
+      strategy: calibrator_soft_flagging.yaml
+#      ncpu: 8 # no this parameter in new caracal version 
+
+crosscal:
+  enable: true
+  uvrange: '>150'
+  label_cal: 1gc
+  label_in: cal
+  set_model:
+    enable: true
+    meerkat_skymodel: false
+  primary:
+    reuse_existing_gains: false
+    order: KBGKB
+    combine: [scan,scan,'',scan,scan]
+    solint: [inf,inf,60s,inf,inf]
+    calmode: ['','',ap,'','']
+    b_solnorm: false
+    b_fillgaps: 70
+    plotgains: true
+  secondary:
+    reuse_existing_gains: false
+    order: 'FAF'
+    apply: 'KB'
+    combine: ['','','']
+    solint: [inf,'',inf]
+    calmode: [ap,'',ap]
+#    flag:
+#      timecutoff: 2.5  # 1.8 # V0 a12
+#      freqcutoff: 2  # 1.8 # V0 a12
+#      flagdimension: timefreq # V0 a12
+#      usewindowstats: std  # v0 a12 
+    plotgains: true
+  apply_cal: 
+    applyto: 
+      - bpcal
+      - gcal
+  summary:
+    enable: true
+
+inspect:
+  enable: true
+  label_in: cal
+  label_cal: 1gc
+  uvrange: '>150'
+  dirname: 'crosscal'
+  shadems:
+    enable: false
+  standard_plotter: shadems
+  fields:
+    - bpcal
+    - gcal
+  real_imag:
+    enable: true
+    avgtime: '60'
+    avgchan: '10'
+  amp_chan:
+    enable: true
+    avgtime: '60'
+    avgchan: '1'
+  phase_chan:
+    enable: true
+    avgtime: '60'
+    avgchan: '1'
+  amp_uvwave:
+    enable: true
+    avgtime: '60'
+    avgchan: '10'
+  phase_uvwave:
+    enable: true
+    avgtime: '60'
+    avgchan: '10'
+
+transform__2:
+  enable: true
+  label_in: ''
+  label_out: corr
+  split_field: 
+    enable: true
+    field: 'target'
+    time_avg: ''
+    chan_avg: 1
+    col: corrected
+    correlation: ''
+    spw: ''
+    otfcal: 
+      enable: true
+      label_cal: 1gc
+  obsinfo: 
+    enable: true
+    listobs: true
+
+prep__2:
+  enable: true
+  label_in: corr
+  field: target
+  manage_flags:
+    enable: true
+    mode: legacy
+  specweights:
+    enable: true
+    mode: uniform
+
+flag__2:
+  enable: true
+  field: target
+  label_in: corr
+  flag_quack:
+    enable: true
+    interval: 7
+    mode: beg
+  flag_autocorr:
+    enable: true
+  flag_shadow:
+    enable: true
+  flag_spw:
+    enable: true # V0
+    chans: '*:1419.4~1421.4MHz' # 533 (1419.36MHz, 220.8km/s) ~ 543 (1421.45MHz, -220.2km/s) # 543 is flagged?
+  summary:
+    enable: true
+    
+flag__3:
+  enable: true
+  label_in: corr
+  field: target
+  flag_rfi:
+    enable: true
+    flagger: aoflagger
+    col: DATA
+    aoflagger:
+      strategy: ps_aoflagger_Q.rfis
+  summary:
+    enable: true
+
+transform__3:
+  enable: true
+  label_in: corr
+  label_out: cont
+  split_field:
+    enable: true
+    field: 'target'
+    time_avg: ''
+    chan_avg: 9
+    col: data
+    correlation: ''
+    spw: ''
+    otfcal:
+      enable: false
+  obsinfo:
+    enable: true
+    listobs: true
+
+#flag__4: #v0
+#  enable: true
+#  field: target
+#  label_in: cont
+#  flag_spw:
+#    enable: true
+#    chans: '*:1419.4~1421.4MHz' # 533 (1419.36MHz, 220.8km/s) ~ 543 (1421.45MHz, -220.2km/s)
+#  summary:
+#    enable: true
+    
+mask:
+  enable: false
+
+selfcal:
+  enable: true
+  label_in: cont
+  ncpu: 8
+  img_npix: 3600
+  img_cell: 3
+  img_taper: '9'
+  img_robust: -1
+  img_mgain: 0.99
+  img_nchans: 5
+  img_specfit_nrcoeff: 3
+  img_sofia_settings:
+    kernels: [0, 3, 6, 12, 24, 48]
+  cal_niter: 2
+  cal_timeslots_chunk: 300
+  calibrate_with: cubical
+  cal_cubical:
+    shared_mem: 60Gb
+  image:
+    enable: true
+    clean_cutoff: [0.2,]
+    cleanmask_method: [sofia,]
+    cleanmask_thr: [4,4,3.5]
+    cleanmask_localrms: [true,]
+    cleanmask_localrms_window: [301,]
+  calibrate:
+    enable: true
+    gain_matrix_type: [GainDiagPhase,]
+    gsols_timeslots: [30, 5,]
+  transfer_apply_gains:
+    enable: true
+    transfer_to_label: corr
+  transfer_model:
+    enable: true
+    transfer_to_label: corr
+  flagging_summary:
+    enable: true
+
+ddcal:
+  enable: false
+
+#flag__line: # V0
+#  enable: true
+#  label_in: corr
+#  field: target
+#  flag_spw:
+#    enable: true
+#    chans: '*:1419.2~1420.0MHz'
+#  summary:
+#    enable: true
+
+line:
+  enable: true
+  restfreq: '1.420405752GHz'
+  label_in: corr
+  subtractmodelcol:
+    enable: true
+  mstransform:
+    enable: true
+    doppler:
+      enable: true
+      telescope: meerkat
+    uvlin:
+      enable: true
+#      fitspw: '*:3~534, *:544~582' # V0 ! the MW channel is flagged # HI rest channel 538.70 '*:3~532, *:544~582' +-220 km/s ('*:1419.162~1421.45MHz') 
+      fitorder: 3
+#  flag_mst_errors:
+#    enable: true # V0
+  sunblocker:
+    enable: true
+    use_mstransform: true
+    imsize: 2400 #V0
+    cell: 3 #V0
+    vampirisms: true
+  make_cube:
+    enable: true
+    use_mstransform: true
+    npix: [2400]  # V0
+    cell: 3 # V0
+    weight: 'briggs'
+    robust: 0.5 #V0
+#    niter: 1  #V0
+    wscl_sofia_niter: 1
+    wscl_auto_mask: 10 # 10 # 5 Julia #V0
+    wscl_auto_thr: 5 # 0.5 *rms #V0
+  remove_stokes_axis:
+    enable: true # false
+  pb_cube:
+    enable: false #V0
+    apply_pb: false #V0
+  freq_to_vel:
+    enable: true # false  
+  sofia:
+    enable: false
