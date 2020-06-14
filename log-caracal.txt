@@ -1,0 +1,813 @@
+2020-06-08 11:14:42 CARACal WARNING: Config file 1_V0_1547413577.yml schema version is 0.3.1, current CARACal version is 1.0.0
+2020-06-08 11:14:42 CARACal WARNING: Will try to proceed anyway, but please be advised that configuration options may have changed.
+2020-06-08 11:14:42 CARACal INFO: Loading pipeline configuration from 1_V0_1547413577.yml
+2020-06-08 11:14:42 CARACal INFO: Version 1.0.0 installed at /idia/projects/vela/CARACal_all/CARACal-18May2020/CARACal-venv-18May2020/lib/python3.7/site-packages/caracal
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   general:
+2020-06-08 11:14:42 CARACal INFO:     title:                        GPS
+2020-06-08 11:14:42 CARACal INFO:     rawdatadir:                   
+2020-06-08 11:14:42 CARACal INFO:     msdir:                        msdir
+2020-06-08 11:14:42 CARACal INFO:     input:                        input
+2020-06-08 11:14:42 CARACal INFO:     output:                       output
+2020-06-08 11:14:42 CARACal INFO:     prefix:                       V0
+2020-06-08 11:14:42 CARACal INFO:     prep_workspace:               True
+2020-06-08 11:14:42 CARACal INFO:     init_notebooks:               ['std-progress-report', 'project-logs']
+2020-06-08 11:14:42 CARACal INFO:     report_notebooks:             ['detailed-final-report']
+2020-06-08 11:14:42 CARACal INFO:     final_report:                 False
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   getdata:
+2020-06-08 11:14:42 CARACal INFO:     dataid:                       ['1547413577_sdp_l0']
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   obsconf:
+2020-06-08 11:14:42 CARACal INFO:     target:                       ['all']
+2020-06-08 11:14:42 CARACal INFO:     gcal:                         ['all']
+2020-06-08 11:14:42 CARACal INFO:     bpcal:                        ['longest']
+2020-06-08 11:14:42 CARACal INFO:     fcal:                         ['longest']
+2020-06-08 11:14:42 CARACal INFO:     xcal:                         ['longest']
+2020-06-08 11:14:42 CARACal INFO:     refant:                       m032
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     obsinfo:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       listobs:                      True
+2020-06-08 11:14:42 CARACal INFO:       summary_json:                 True
+2020-06-08 11:14:42 CARACal INFO:       vampirisms:                   False
+2020-06-08 11:14:42 CARACal INFO:       plotelev:
+2020-06-08 11:14:42 CARACal INFO:         enable:                       True
+2020-06-08 11:14:42 CARACal INFO:         plotter:                      owlcat
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   transform:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     
+2020-06-08 11:14:42 CARACal INFO:     label_out:                    cal
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     split_field:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       field:                        calibrators
+2020-06-08 11:14:42 CARACal INFO:       time_avg:                     
+2020-06-08 11:14:42 CARACal INFO:       chan_avg:                     1
+2020-06-08 11:14:42 CARACal INFO:       col:                          data
+2020-06-08 11:14:42 CARACal INFO:       correlation:                  
+2020-06-08 11:14:42 CARACal INFO:       create_specweights:           True
+2020-06-08 11:14:42 CARACal INFO:       spw:                          
+2020-06-08 11:14:42 CARACal INFO:     obsinfo:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       listobs:                      True
+2020-06-08 11:14:42 CARACal INFO:       summary_json:                 True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   prep:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cal
+2020-06-08 11:14:42 CARACal INFO:     field:                        calibrators
+2020-06-08 11:14:42 CARACal INFO:     clearcal:                     False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     manage_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         legacy
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     specweights:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         uniform
+2020-06-08 11:14:42 CARACal INFO:       calculate:
+2020-06-08 11:14:42 CARACal INFO:         statsfile:                    use_package_meerkat_spec
+2020-06-08 11:14:42 CARACal INFO:         weightcols:                   ['WEIGHT', 'WEIGHT_SPECTRUM']
+2020-06-08 11:14:42 CARACal INFO:         noisecols:                    ['SIGMA', 'SIGMA_SPECTRUM']
+2020-06-08 11:14:42 CARACal INFO:         apply:                        True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   flag__legacysummary:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     field:                        calibrators
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cal
+2020-06-08 11:14:42 CARACal INFO:     calfields:                    auto
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   flag__static:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     field:                        calibrators
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cal
+2020-06-08 11:14:42 CARACal INFO:     calfields:                    auto
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     flag_autocorr:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     flag_quack:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       interval:                     7.0
+2020-06-08 11:14:42 CARACal INFO:       mode:                         beg
+2020-06-08 11:14:42 CARACal INFO:     flag_shadow:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       tol:                          0.0
+2020-06-08 11:14:42 CARACal INFO:       full_mk64:                    False
+2020-06-08 11:14:42 CARACal INFO:     flag_spw:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       chans:                        *:1419.4~1421.4MHz
+2020-06-08 11:14:42 CARACal INFO:       ensure_valid:                 True
+2020-06-08 11:14:42 CARACal INFO:     summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   flag__gcal:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     field:                        calibrators
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cal
+2020-06-08 11:14:42 CARACal INFO:     calfields:                    gcal
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     flag_rfi:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       flagger:                      tricolour
+2020-06-08 11:14:42 CARACal INFO:       col:                          DATA
+2020-06-08 11:14:42 CARACal INFO:       aoflagger:
+2020-06-08 11:14:42 CARACal INFO:         strategy:                     firstpass_Q.rfis
+2020-06-08 11:14:42 CARACal INFO:         ensure_valid:                 True
+2020-06-08 11:14:42 CARACal INFO:         readmode:                     auto
+2020-06-08 11:14:42 CARACal INFO:       tricolour:
+2020-06-08 11:14:42 CARACal INFO:         backend:                      numpy
+2020-06-08 11:14:42 CARACal INFO:         mode:                         auto
+2020-06-08 11:14:42 CARACal INFO:         strategy:                     calibrator_soft_flagging.yaml
+2020-06-08 11:14:42 CARACal INFO:         strat_narrow:                 calibrator_mild_flagging.yaml
+2020-06-08 11:14:42 CARACal INFO:       tfcrop:
+2020-06-08 11:14:42 CARACal INFO:         usewindowstats:               std
+2020-06-08 11:14:42 CARACal INFO:         combinescans:                 False
+2020-06-08 11:14:42 CARACal INFO:         flagdimension:                freqtime
+2020-06-08 11:14:42 CARACal INFO:         timecutoff:                   4.0
+2020-06-08 11:14:42 CARACal INFO:         freqcutoff:                   3.0
+2020-06-08 11:14:42 CARACal INFO:         correlation:                  
+2020-06-08 11:14:42 CARACal INFO:     summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   crosscal:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cal
+2020-06-08 11:14:42 CARACal INFO:     label_cal:                    1gc
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     uvrange:                      >150
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     set_model:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       meerkat_skymodel:             False
+2020-06-08 11:14:42 CARACal INFO:       no_verify:                    False
+2020-06-08 11:14:42 CARACal INFO:       field:                        fcal
+2020-06-08 11:14:42 CARACal INFO:       threads:                      8
+2020-06-08 11:14:42 CARACal INFO:     primary:
+2020-06-08 11:14:42 CARACal INFO:       reuse_existing_gains:         False
+2020-06-08 11:14:42 CARACal INFO:       order:                        KBGKB
+2020-06-08 11:14:42 CARACal INFO:       b_solnorm:                    False
+2020-06-08 11:14:42 CARACal INFO:       calmode:                      ['', '', 'ap', '', '']
+2020-06-08 11:14:42 CARACal INFO:       solint:                       ['inf', 'inf', '60s', 'inf', 'inf']
+2020-06-08 11:14:42 CARACal INFO:       combine:                      ['scan', 'scan', '', 'scan', 'scan']
+2020-06-08 11:14:42 CARACal INFO:       b_fillgaps:                   70
+2020-06-08 11:14:42 CARACal INFO:       plotgains:                    True
+2020-06-08 11:14:42 CARACal INFO:       flag:
+2020-06-08 11:14:42 CARACal INFO:         col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:         usewindowstats:               std
+2020-06-08 11:14:42 CARACal INFO:         combinescans:                 False
+2020-06-08 11:14:42 CARACal INFO:         flagdimension:                freqtime
+2020-06-08 11:14:42 CARACal INFO:         timecutoff:                   4.0
+2020-06-08 11:14:42 CARACal INFO:         freqcutoff:                   3.0
+2020-06-08 11:14:42 CARACal INFO:         correlation:                  
+2020-06-08 11:14:42 CARACal INFO:     secondary:
+2020-06-08 11:14:42 CARACal INFO:       reuse_existing_gains:         False
+2020-06-08 11:14:42 CARACal INFO:       apply:                        KB
+2020-06-08 11:14:42 CARACal INFO:       order:                        FAF
+2020-06-08 11:14:42 CARACal INFO:       calmode:                      ['ap', '', 'ap']
+2020-06-08 11:14:42 CARACal INFO:       solint:                       ['inf', '', 'inf']
+2020-06-08 11:14:42 CARACal INFO:       combine:                      ['', '', '']
+2020-06-08 11:14:42 CARACal INFO:       b_solnorm:                    False
+2020-06-08 11:14:42 CARACal INFO:       b_fillgaps:                   70
+2020-06-08 11:14:42 CARACal INFO:       plotgains:                    True
+2020-06-08 11:14:42 CARACal INFO:       flag:
+2020-06-08 11:14:42 CARACal INFO:         col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:         usewindowstats:               std
+2020-06-08 11:14:42 CARACal INFO:         combinescans:                 False
+2020-06-08 11:14:42 CARACal INFO:         flagdimension:                freqtime
+2020-06-08 11:14:42 CARACal INFO:         timecutoff:                   4.0
+2020-06-08 11:14:42 CARACal INFO:         freqcutoff:                   3.0
+2020-06-08 11:14:42 CARACal INFO:         correlation:                  
+2020-06-08 11:14:42 CARACal INFO:       image:
+2020-06-08 11:14:42 CARACal INFO:         npix:                         4096
+2020-06-08 11:14:42 CARACal INFO:         padding:                      1.5
+2020-06-08 11:14:42 CARACal INFO:         mgain:                        0.85
+2020-06-08 11:14:42 CARACal INFO:         cell:                         0.5
+2020-06-08 11:14:42 CARACal INFO:         weight:                       briggs -1.0
+2020-06-08 11:14:42 CARACal INFO:         auto_mask:                    10.0
+2020-06-08 11:14:42 CARACal INFO:         auto_threshold:               1.5
+2020-06-08 11:14:42 CARACal INFO:         col:                          CORRECTED_DATA
+2020-06-08 11:14:42 CARACal INFO:         local_rms:                    True
+2020-06-08 11:14:42 CARACal INFO:         rms_window:                   150
+2020-06-08 11:14:42 CARACal INFO:         niter:                        120000
+2020-06-08 11:14:42 CARACal INFO:         nchans:                       7
+2020-06-08 11:14:42 CARACal INFO:         fit_spectral_pol:             2
+2020-06-08 11:14:42 CARACal INFO:     apply_cal:
+2020-06-08 11:14:42 CARACal INFO:       applyto:                      ['bpcal', 'gcal']
+2020-06-08 11:14:42 CARACal INFO:       calmode:                      calflag
+2020-06-08 11:14:42 CARACal INFO:     summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   inspect:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cal
+2020-06-08 11:14:42 CARACal INFO:     label_cal:                    1gc
+2020-06-08 11:14:42 CARACal INFO:     dirname:                      crosscal
+2020-06-08 11:14:42 CARACal INFO:     standard_plotter:             shadems
+2020-06-08 11:14:42 CARACal INFO:     correlation:                  XX, YY
+2020-06-08 11:14:42 CARACal INFO:     num_cores:                    8
+2020-06-08 11:14:42 CARACal INFO:     mem_limit:                    8GB
+2020-06-08 11:14:42 CARACal INFO:     uvrange:                      >150
+2020-06-08 11:14:42 CARACal INFO:     fields:                       ['bpcal', 'gcal']
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     real_imag:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       fields:                       ['']
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       avgtime:                      60
+2020-06-08 11:14:42 CARACal INFO:       avgchan:                      10
+2020-06-08 11:14:42 CARACal INFO:     amp_uvwave:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       fields:                       ['']
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       avgtime:                      60
+2020-06-08 11:14:42 CARACal INFO:       avgchan:                      10
+2020-06-08 11:14:42 CARACal INFO:     phase_uvwave:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       fields:                       ['']
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       avgtime:                      60
+2020-06-08 11:14:42 CARACal INFO:       avgchan:                      10
+2020-06-08 11:14:42 CARACal INFO:     amp_chan:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       fields:                       ['']
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       avgtime:                      60
+2020-06-08 11:14:42 CARACal INFO:       avgchan:                      1
+2020-06-08 11:14:42 CARACal INFO:     phase_chan:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       fields:                       ['']
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       avgtime:                      60
+2020-06-08 11:14:42 CARACal INFO:       avgchan:                      1
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   transform__2:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     
+2020-06-08 11:14:42 CARACal INFO:     label_out:                    corr
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     split_field:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       field:                        target
+2020-06-08 11:14:42 CARACal INFO:       time_avg:                     
+2020-06-08 11:14:42 CARACal INFO:       chan_avg:                     1
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       correlation:                  
+2020-06-08 11:14:42 CARACal INFO:       create_specweights:           True
+2020-06-08 11:14:42 CARACal INFO:       spw:                          
+2020-06-08 11:14:42 CARACal INFO:       otfcal:
+2020-06-08 11:14:42 CARACal INFO:         enable:                       True
+2020-06-08 11:14:42 CARACal INFO:         callib:                       
+2020-06-08 11:14:42 CARACal INFO:         label_cal:                    1gc
+2020-06-08 11:14:42 CARACal INFO:     obsinfo:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       listobs:                      True
+2020-06-08 11:14:42 CARACal INFO:       summary_json:                 True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   prep__2:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     corr
+2020-06-08 11:14:42 CARACal INFO:     field:                        target
+2020-06-08 11:14:42 CARACal INFO:     clearcal:                     False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     manage_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         legacy
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     specweights:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         uniform
+2020-06-08 11:14:42 CARACal INFO:       calculate:
+2020-06-08 11:14:42 CARACal INFO:         statsfile:                    use_package_meerkat_spec
+2020-06-08 11:14:42 CARACal INFO:         weightcols:                   ['WEIGHT', 'WEIGHT_SPECTRUM']
+2020-06-08 11:14:42 CARACal INFO:         noisecols:                    ['SIGMA', 'SIGMA_SPECTRUM']
+2020-06-08 11:14:42 CARACal INFO:         apply:                        True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   flag__2:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     field:                        target
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     corr
+2020-06-08 11:14:42 CARACal INFO:     calfields:                    auto
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     flag_autocorr:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     flag_quack:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       interval:                     7.0
+2020-06-08 11:14:42 CARACal INFO:       mode:                         beg
+2020-06-08 11:14:42 CARACal INFO:     flag_shadow:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       tol:                          0.0
+2020-06-08 11:14:42 CARACal INFO:       full_mk64:                    False
+2020-06-08 11:14:42 CARACal INFO:     flag_spw:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       chans:                        *:1419.4~1421.4MHz
+2020-06-08 11:14:42 CARACal INFO:       ensure_valid:                 True
+2020-06-08 11:14:42 CARACal INFO:     summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   flag__3:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     field:                        target
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     corr
+2020-06-08 11:14:42 CARACal INFO:     calfields:                    auto
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:     flag_rfi:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       flagger:                      aoflagger
+2020-06-08 11:14:42 CARACal INFO:       col:                          DATA
+2020-06-08 11:14:42 CARACal INFO:       aoflagger:
+2020-06-08 11:14:42 CARACal INFO:         strategy:                     ps_aoflagger_Q.rfis
+2020-06-08 11:14:42 CARACal INFO:         ensure_valid:                 True
+2020-06-08 11:14:42 CARACal INFO:         readmode:                     auto
+2020-06-08 11:14:42 CARACal INFO:       tricolour:
+2020-06-08 11:14:42 CARACal INFO:         backend:                      numpy
+2020-06-08 11:14:42 CARACal INFO:         mode:                         auto
+2020-06-08 11:14:42 CARACal INFO:         strategy:                     mk_rfi_flagging_calibrator_fields_firstpass.yaml
+2020-06-08 11:14:42 CARACal INFO:         strat_narrow:                 calibrator_mild_flagging.yaml
+2020-06-08 11:14:42 CARACal INFO:       tfcrop:
+2020-06-08 11:14:42 CARACal INFO:         usewindowstats:               std
+2020-06-08 11:14:42 CARACal INFO:         combinescans:                 False
+2020-06-08 11:14:42 CARACal INFO:         flagdimension:                freqtime
+2020-06-08 11:14:42 CARACal INFO:         timecutoff:                   4.0
+2020-06-08 11:14:42 CARACal INFO:         freqcutoff:                   3.0
+2020-06-08 11:14:42 CARACal INFO:         correlation:                  
+2020-06-08 11:14:42 CARACal INFO:     summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   transform__3:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     corr
+2020-06-08 11:14:42 CARACal INFO:     label_out:                    cont
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     split_field:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       field:                        target
+2020-06-08 11:14:42 CARACal INFO:       time_avg:                     
+2020-06-08 11:14:42 CARACal INFO:       chan_avg:                     9
+2020-06-08 11:14:42 CARACal INFO:       col:                          data
+2020-06-08 11:14:42 CARACal INFO:       correlation:                  
+2020-06-08 11:14:42 CARACal INFO:       create_specweights:           True
+2020-06-08 11:14:42 CARACal INFO:       spw:                          
+2020-06-08 11:14:42 CARACal INFO:     obsinfo:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       listobs:                      True
+2020-06-08 11:14:42 CARACal INFO:       summary_json:                 True
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   selfcal:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     cont
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     calibrate_with:               cubical
+2020-06-08 11:14:42 CARACal INFO:     spwid:                        0
+2020-06-08 11:14:42 CARACal INFO:     ncpu:                         8
+2020-06-08 11:14:42 CARACal INFO:     minuvw_m:                     0
+2020-06-08 11:14:42 CARACal INFO:     img_npix:                     3600
+2020-06-08 11:14:42 CARACal INFO:     img_padding:                  1.3
+2020-06-08 11:14:42 CARACal INFO:     img_gain:                     0.1
+2020-06-08 11:14:42 CARACal INFO:     img_mgain:                    0.99
+2020-06-08 11:14:42 CARACal INFO:     img_cell:                     3.0
+2020-06-08 11:14:42 CARACal INFO:     img_weight:                   briggs
+2020-06-08 11:14:42 CARACal INFO:     img_robust:                   -1.0
+2020-06-08 11:14:42 CARACal INFO:     img_taper:                    9
+2020-06-08 11:14:42 CARACal INFO:     img_maxuv_l:                  0.0
+2020-06-08 11:14:42 CARACal INFO:     img_transuv_l:                10.0
+2020-06-08 11:14:42 CARACal INFO:     img_niter:                    1000000
+2020-06-08 11:14:42 CARACal INFO:     img_nmiter:                   0
+2020-06-08 11:14:42 CARACal INFO:     img_cleanborder:              1.3
+2020-06-08 11:14:42 CARACal INFO:     img_nchans:                   5
+2020-06-08 11:14:42 CARACal INFO:     img_joinchans:                True
+2020-06-08 11:14:42 CARACal INFO:     img_specfit_nrcoeff:          3
+2020-06-08 11:14:42 CARACal INFO:     img_stokes:                   I
+2020-06-08 11:14:42 CARACal INFO:     img_multiscale:               False
+2020-06-08 11:14:42 CARACal INFO:     img_multiscale_scales:        [10, 20, 30]
+2020-06-08 11:14:42 CARACal INFO:     cal_niter:                    2
+2020-06-08 11:14:42 CARACal INFO:     start_iter:                   1
+2020-06-08 11:14:42 CARACal INFO:     cal_gain_cliplow:             0.5
+2020-06-08 11:14:42 CARACal INFO:     cal_gain_cliphigh:            2.0
+2020-06-08 11:14:42 CARACal INFO:     cal_timeslots_chunk:          300
+2020-06-08 11:14:42 CARACal INFO:     cal_model_mode:               vis_only
+2020-06-08 11:14:42 CARACal INFO:     cal_bjones:                   False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:       transfer_apply_gains_version: auto
+2020-06-08 11:14:42 CARACal INFO:     img_sofia_settings:
+2020-06-08 11:14:42 CARACal INFO:       kernels:                      [0.0, 3.0, 6.0, 12.0, 24.0, 48.0]
+2020-06-08 11:14:42 CARACal INFO:       pospix:                       True
+2020-06-08 11:14:42 CARACal INFO:       flag:                         False
+2020-06-08 11:14:42 CARACal INFO:       flagregion:                   ['']
+2020-06-08 11:14:42 CARACal INFO:       inputmask:                    
+2020-06-08 11:14:42 CARACal INFO:       fornax_special:               False
+2020-06-08 11:14:42 CARACal INFO:       fornax_thr:                   [4.0]
+2020-06-08 11:14:42 CARACal INFO:       fornax_sofia:                 False
+2020-06-08 11:14:42 CARACal INFO:     cal_cubical:
+2020-06-08 11:14:42 CARACal INFO:       max_prior_error:              0.3
+2020-06-08 11:14:42 CARACal INFO:       max_post_error:               0.3
+2020-06-08 11:14:42 CARACal INFO:       chan_chunk:                   -1
+2020-06-08 11:14:42 CARACal INFO:       weight_col:                   WEIGHT
+2020-06-08 11:14:42 CARACal INFO:       shared_mem:                   60Gb
+2020-06-08 11:14:42 CARACal INFO:       flag_madmax:                  True
+2020-06-08 11:14:42 CARACal INFO:       madmax_flag_thr:              [0, 10]
+2020-06-08 11:14:42 CARACal INFO:       solterm_niter:                [50, 50, 50]
+2020-06-08 11:14:42 CARACal INFO:       overwrite:                    True
+2020-06-08 11:14:42 CARACal INFO:       dist_max_chunks:              4
+2020-06-08 11:14:42 CARACal INFO:     cal_meqtrees:
+2020-06-08 11:14:42 CARACal INFO:       two_step:                     False
+2020-06-08 11:14:42 CARACal INFO:     image:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       col:                          ['DATA', 'CORRECTED_DATA']
+2020-06-08 11:14:42 CARACal INFO:       clean_cutoff:                 [0.2]
+2020-06-08 11:14:42 CARACal INFO:       cleanmask_method:             ['sofia']
+2020-06-08 11:14:42 CARACal INFO:       cleanmask_thr:                [4.0, 4.0, 3.5]
+2020-06-08 11:14:42 CARACal INFO:       cleanmask_localrms:           [True]
+2020-06-08 11:14:42 CARACal INFO:       cleanmask_localrms_window:    [301]
+2020-06-08 11:14:42 CARACal INFO:     calibrate:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       model:                        ['1', '2']
+2020-06-08 11:14:42 CARACal INFO:       output_data:                  ['CORR_DATA']
+2020-06-08 11:14:42 CARACal INFO:       gain_matrix_type:             ['GainDiagPhase']
+2020-06-08 11:14:42 CARACal INFO:       gsols_timeslots:              [30, 5]
+2020-06-08 11:14:42 CARACal INFO:       gsols_chan:                   [0]
+2020-06-08 11:14:42 CARACal INFO:       bsols_timeslots:              [0]
+2020-06-08 11:14:42 CARACal INFO:       bsols_chan:                   [2]
+2020-06-08 11:14:42 CARACal INFO:       gasols_timeslots:             [-1]
+2020-06-08 11:14:42 CARACal INFO:       gasols_chan:                  [-1]
+2020-06-08 11:14:42 CARACal INFO:     flagging_summary:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     transfer_apply_gains:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       transfer_to_label:            corr
+2020-06-08 11:14:42 CARACal INFO:       interpolate:
+2020-06-08 11:14:42 CARACal INFO:         enable:                       True
+2020-06-08 11:14:42 CARACal INFO:         timeslots_int:                -1
+2020-06-08 11:14:42 CARACal INFO:         chan_int:                     -1
+2020-06-08 11:14:42 CARACal INFO:         timeslots_chunk:              -1
+2020-06-08 11:14:42 CARACal INFO:         chan_chunk:                   -1
+2020-06-08 11:14:42 CARACal INFO:     transfer_model:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       transfer_to_label:            corr
+2020-06-08 11:14:42 CARACal INFO:       model:                        auto
+2020-06-08 11:14:42 CARACal INFO:       row_chunks:                   0
+2020-06-08 11:14:42 CARACal INFO:       model_chunks:                 0
+2020-06-08 11:14:42 CARACal INFO:       within:                       
+2020-06-08 11:14:42 CARACal INFO:       points_only:                  False
+2020-06-08 11:14:42 CARACal INFO:       num_sources:                  0
+2020-06-08 11:14:42 CARACal INFO:       num_workers:                  0
+2020-06-08 11:14:42 CARACal INFO:       mem_frac:                     0.5
+2020-06-08 11:14:42 CARACal INFO: 
+2020-06-08 11:14:42 CARACal INFO:   line:
+2020-06-08 11:14:42 CARACal INFO:     enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     label_in:                     corr
+2020-06-08 11:14:42 CARACal INFO:     line_name:                    HI
+2020-06-08 11:14:42 CARACal INFO:     restfreq:                     1.420405752GHz
+2020-06-08 11:14:42 CARACal INFO:     overwrite_flagvers:           False
+2020-06-08 11:14:42 CARACal INFO:     report:                       False
+2020-06-08 11:14:42 CARACal INFO:     rewind_flags:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       mode:                         reset_worker
+2020-06-08 11:14:42 CARACal INFO:       version:                      auto
+2020-06-08 11:14:42 CARACal INFO:       mstransform_version:          auto
+2020-06-08 11:14:42 CARACal INFO:     subtractmodelcol:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     mstransform:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       col:                          corrected
+2020-06-08 11:14:42 CARACal INFO:       obsinfo:                      True
+2020-06-08 11:14:42 CARACal INFO:       doppler:
+2020-06-08 11:14:42 CARACal INFO:         enable:                       True
+2020-06-08 11:14:42 CARACal INFO:         telescope:                    meerkat
+2020-06-08 11:14:42 CARACal INFO:         mode:                         frequency
+2020-06-08 11:14:42 CARACal INFO:         frame:                        bary
+2020-06-08 11:14:42 CARACal INFO:         veltype:                      radio
+2020-06-08 11:14:42 CARACal INFO:         changrid:                     auto
+2020-06-08 11:14:42 CARACal INFO:       uvlin:
+2020-06-08 11:14:42 CARACal INFO:         enable:                       True
+2020-06-08 11:14:42 CARACal INFO:         fitspw:                       
+2020-06-08 11:14:42 CARACal INFO:         fitorder:                     3
+2020-06-08 11:14:42 CARACal INFO:     sunblocker:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       use_mstransform:              True
+2020-06-08 11:14:42 CARACal INFO:       imsize:                       2400
+2020-06-08 11:14:42 CARACal INFO:       cell:                         3.0
+2020-06-08 11:14:42 CARACal INFO:       thr:                          4.0
+2020-06-08 11:14:42 CARACal INFO:       vampirisms:                   True
+2020-06-08 11:14:42 CARACal INFO:       uvmin:                        0.0
+2020-06-08 11:14:42 CARACal INFO:       uvmax:                        2000.0
+2020-06-08 11:14:42 CARACal INFO:     make_cube:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       image_with:                   wsclean
+2020-06-08 11:14:42 CARACal INFO:       use_mstransform:              True
+2020-06-08 11:14:42 CARACal INFO:       stokes:                       I
+2020-06-08 11:14:42 CARACal INFO:       spwid:                        0
+2020-06-08 11:14:42 CARACal INFO:       nchans:                       0
+2020-06-08 11:14:42 CARACal INFO:       firstchan:                    0
+2020-06-08 11:14:42 CARACal INFO:       binchans:                     1
+2020-06-08 11:14:42 CARACal INFO:       npix:                         [2400]
+2020-06-08 11:14:42 CARACal INFO:       cell:                         3.0
+2020-06-08 11:14:42 CARACal INFO:       padding:                      1.2
+2020-06-08 11:14:42 CARACal INFO:       weight:                       briggs
+2020-06-08 11:14:42 CARACal INFO:       robust:                       0.5
+2020-06-08 11:14:42 CARACal INFO:       taper:                        0.0
+2020-06-08 11:14:42 CARACal INFO:       niter:                        1000000
+2020-06-08 11:14:42 CARACal INFO:       gain:                         0.1
+2020-06-08 11:14:42 CARACal INFO:       wscl_mgain:                   1.0
+2020-06-08 11:14:42 CARACal INFO:       wscl_sofia_niter:             1
+2020-06-08 11:14:42 CARACal INFO:       wscl_sofia_converge:          1.1
+2020-06-08 11:14:42 CARACal INFO:       wscl_removeintermediate:      False
+2020-06-08 11:14:42 CARACal INFO:       wscl_user_clean_mask:         
+2020-06-08 11:14:42 CARACal INFO:       wscl_auto_mask:               10.0
+2020-06-08 11:14:42 CARACal INFO:       wscl_auto_thr:                10.0
+2020-06-08 11:14:42 CARACal INFO:       wscl_make_cube:               True
+2020-06-08 11:14:42 CARACal INFO:       wscl_noupdatemod:             True
+2020-06-08 11:14:42 CARACal INFO:       wscl_multiscale:              False
+2020-06-08 11:14:42 CARACal INFO:       wscl_multiscale_scales:       [0, 10, 20, 30]
+2020-06-08 11:14:42 CARACal INFO:       wscl_multiscale_bias:         0.6
+2020-06-08 11:14:42 CARACal INFO:       casa_thr:                     10mJy
+2020-06-08 11:14:42 CARACal INFO:       casa_port2fits:               False
+2020-06-08 11:14:42 CARACal INFO:     remove_stokes_axis:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:     freq_to_vel:
+2020-06-08 11:14:42 CARACal INFO:       enable:                       True
+2020-06-08 11:14:42 CARACal INFO:       reverse:                      False
+2020-06-08 11:14:42 CARACal INFO: Obtaining divine knowledge from: /idia/projects/vela/CARACal_all/CARACal-18May2020/CARACal-venv-18May2020/lib/python3.7/site-packages/caracal/data/southern_calibrators.txt
+2020-06-08 11:15:50 CARACal INFO: output directory for logs is output/logs-20200608-111445
+2020-06-08 11:15:50 CARACal INFO: output/logs links to logs-20200608-111445
+2020-06-08 11:15:50 CARACal INFO: output/log-caracal.txt links to logs-20200608-111445/log-caracal.txt
+2020-06-08 11:15:50 CARACal INFO: Copying meerkat input files into input folder
+2020-06-08 11:15:53 CARACal INFO: Copying fields for masking into input folder
+2020-06-08 11:15:54 CARACal INFO: Creating standard notebook output/V0-std-progress-report.ipynb from template
+2020-06-08 11:15:54 CARACal INFO: Creating standard notebook output/V0-detailed-final-report.ipynb from template
+2020-06-08 11:15:54 CARACal INFO: Creating standard notebook output/V0-project-logs.ipynb from template
+2020-06-08 11:15:54 CARACal INFO: configuring worker getdata
+2020-06-08 11:15:54 CARACal INFO: configuring worker obsconf
+2020-06-08 11:15:54 CARACal INFO: configuring worker transform
+2020-06-08 11:15:54 CARACal INFO: configuring worker prep
+2020-06-08 11:15:54 CARACal INFO: configuring worker flag__legacysummary
+2020-06-08 11:15:54 CARACal INFO: configuring worker flag__static
+2020-06-08 11:15:54 CARACal INFO: configuring worker flag__gcal
+2020-06-08 11:15:54 CARACal INFO: configuring worker crosscal
+2020-06-08 11:15:54 CARACal INFO: configuring worker inspect
+2020-06-08 11:15:54 CARACal INFO: configuring worker transform__2
+2020-06-08 11:15:54 CARACal INFO: configuring worker prep__2
+2020-06-08 11:15:54 CARACal INFO: configuring worker flag__2
+2020-06-08 11:15:54 CARACal INFO: configuring worker flag__3
+2020-06-08 11:15:54 CARACal INFO: configuring worker transform__3
+2020-06-08 11:15:54 CARACal INFO: configuring worker selfcal
+2020-06-08 11:15:54 CARACal INFO: configuring worker line
+2020-06-08 11:15:54 CARACal INFO: getdata: initializing
+2020-06-08 11:15:54 CARACal INFO: getdata: running
+2020-06-08 11:15:54 CARACal INFO: getdata: finished
+2020-06-08 11:15:54 CARACal INFO: obsconf: initializing
+2020-06-08 11:19:01 CARACal INFO: Extracting MS info from output/obsinfo/1547413577_sdp_l0-obsinfo.json 
+2020-06-08 11:19:01 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-08 11:19:01 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-08 11:19:02 CARACal INFO: ====================================
+2020-06-08 11:19:02 CARACal INFO: TARGET
+2020-06-08 11:19:02 CARACal INFO:  ---------------------------------- 
+2020-06-08 11:19:02 CARACal INFO: T29R00C02 (ID=2) : 53.04 minutes | RA=143.54 deg, Dec=-51.17 deg
+2020-06-08 11:19:03 CARACal INFO: T29R00C04 (ID=3) : 52.38 minutes | RA=142.40 deg, Dec=-50.50 deg
+2020-06-08 11:19:03 CARACal INFO: T29R00C06 (ID=4) : 49.31 minutes | RA=141.28 deg, Dec=-49.82 deg
+2020-06-08 11:19:03 CARACal INFO: T29R01C01 (ID=5) : 49.31 minutes | RA=143.59 deg, Dec=-51.87 deg
+2020-06-08 11:19:04 CARACal INFO: T29R01C03 (ID=6) : 49.85 minutes | RA=142.43 deg, Dec=-51.20 deg
+2020-06-08 11:19:04 CARACal INFO: T29R01C05 (ID=7) : 50.25 minutes | RA=141.30 deg, Dec=-50.52 deg
+2020-06-08 11:19:05 CARACal INFO: T29R02C02 (ID=8) : 49.98 minutes | RA=142.46 deg, Dec=-51.90 deg
+2020-06-08 11:19:05 CARACal INFO: T29R02C04 (ID=9) : 49.98 minutes | RA=141.32 deg, Dec=-51.21 deg
+2020-06-08 11:19:05 CARACal INFO: T29R02C06 (ID=10) : 49.98 minutes | RA=140.20 deg, Dec=-50.52 deg
+2020-06-08 11:19:05 CARACal INFO: ====================================
+2020-06-08 11:19:05 CARACal INFO: CALIBRATE_AMPL,CALIBRATE_PHASE
+2020-06-08 11:19:05 CARACal INFO:  ---------------------------------- 
+2020-06-08 11:19:06 CARACal INFO: J0825-5010 (ID=1) : 14.13 minutes | RA=126.36 deg, Dec=-50.18 deg
+2020-06-08 11:19:06 CARACal INFO: ====================================
+2020-06-08 11:19:06 CARACal INFO: CALIBRATE_FLUX
+2020-06-08 11:19:06 CARACal INFO:  ---------------------------------- 
+2020-06-08 11:19:06 CARACal INFO: J0408-6545 (ID=0) : 14.39 minutes | RA=62.08 deg, Dec=-65.75 deg
+2020-06-08 11:19:07 CARACal INFO: ====================================
+2020-06-08 11:19:07 CARACal INFO: CALIBRATE_BANDPASS
+2020-06-08 11:19:07 CARACal INFO:  ---------------------------------- 
+2020-06-08 11:19:07 CARACal INFO: J0408-6545 (ID=0) : 14.39 minutes | RA=62.08 deg, Dec=-65.75 deg
+2020-06-08 11:19:07 CARACal INFO: obsconf: running
+2020-06-08 11:19:07 CARACal INFO: obsconf: finished
+2020-06-08 11:19:07 CARACal INFO: transform: initializing
+2020-06-08 11:19:07 CARACal INFO: transform: running
+2020-06-08 11:21:10 CARACal INFO: transform: finished
+2020-06-08 11:21:10 CARACal INFO: prep: initializing
+2020-06-08 11:21:10 CARACal INFO: The file 1547413577_sdp_l0_cal.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 11:21:10 CARACal INFO: prep: running
+2020-06-08 11:21:38 CARACal INFO: prep: finished
+2020-06-08 11:21:38 CARACal INFO: flag: initializing
+2020-06-08 11:22:06 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__legacysummary-summary-ms0-20200608-111445.json
+2020-06-08 11:22:06 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__legacysummary-flagging-summary-plots-0.html
+2020-06-08 11:22:06 CARACal INFO: flag: running
+2020-06-08 11:22:16 CARACal INFO: flag: finished
+2020-06-08 11:22:16 CARACal INFO: flag: initializing
+2020-06-08 11:23:30 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__static-summary-ms0-20200608-111445.json
+2020-06-08 11:23:31 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__static-flagging-summary-plots-0.html
+2020-06-08 11:23:31 CARACal INFO: flag: running
+2020-06-08 11:23:41 CARACal INFO: flag: finished
+2020-06-08 11:23:41 CARACal INFO: flag: initializing
+2020-06-08 11:23:42 CARACal INFO: Total Bandwidth = 122.46484375 MHz
+2020-06-08 11:23:42 CARACal INFO: Flagging strategy in use: calibrator_soft_flagging.yaml
+2020-06-08 11:39:49 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__gcal-summary-ms0-20200608-111445.json
+2020-06-08 11:39:49 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__gcal-flagging-summary-plots-0.html
+2020-06-08 11:39:49 CARACal INFO: flag: running
+2020-06-08 11:40:01 CARACal INFO: flag: finished
+2020-06-08 11:40:01 CARACal INFO: crosscal: initializing
+2020-06-08 11:40:01 CARACal INFO: Obtaining divine knowledge from: /idia/projects/vela/CARACal_all/CARACal-18May2020/CARACal-venv-18May2020/lib/python3.7/site-packages/caracal/data/casa_calibrators.txt
+2020-06-08 12:01:35 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-crosscal-summary-1gc-0-20200608-111445.json
+2020-06-08 12:01:35 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-1gc-crosscal-flagging-summary-plots-0.html
+2020-06-08 12:01:35 CARACal INFO: crosscal: running
+2020-06-08 12:01:35 CARACal INFO: crosscal: finished
+2020-06-08 12:01:35 CARACal INFO: inspect: initializing
+2020-06-08 12:01:41 CARACal INFO: inspect: running
+2020-06-08 12:11:52 CARACal INFO: inspect: finished
+2020-06-08 12:11:53 CARACal INFO: transform: initializing
+2020-06-08 12:11:54 CARACal INFO: transform: running
+2020-06-08 12:43:52 CARACal INFO: transform: finished
+2020-06-08 12:43:53 CARACal INFO: prep: initializing
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R00C02_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R00C04_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R00C06_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R01C01_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R01C03_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R01C05_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R02C02_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R02C04_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: The file 1547413577_sdp_l0-T29R02C06_corr.ms already has a flag version called "caracal_legacy". Restoring it.
+2020-06-08 12:43:53 CARACal INFO: prep: running
+2020-06-08 12:49:49 CARACal INFO: prep: finished
+2020-06-08 12:49:49 CARACal INFO: flag: initializing
+2020-06-08 12:51:17 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms0-20200608-111445.json
+2020-06-08 12:51:17 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 12:52:54 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms1-20200608-111445.json
+2020-06-08 12:52:54 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 12:54:28 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms2-20200608-111445.json
+2020-06-08 12:54:28 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 12:56:02 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms3-20200608-111445.json
+2020-06-08 12:56:02 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 12:57:38 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms4-20200608-111445.json
+2020-06-08 12:57:38 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 12:59:11 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms5-20200608-111445.json
+2020-06-08 12:59:11 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 13:00:45 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms6-20200608-111445.json
+2020-06-08 13:00:45 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 13:02:19 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms7-20200608-111445.json
+2020-06-08 13:02:19 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 13:03:52 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__2-summary-ms8-20200608-111445.json
+2020-06-08 13:03:52 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__2-flagging-summary-plots-0.html
+2020-06-08 13:03:52 CARACal INFO: flag: running
+2020-06-08 13:04:02 CARACal INFO: flag: finished
+2020-06-08 13:04:02 CARACal INFO: flag: initializing
+2020-06-08 13:06:37 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms0-20200608-111445.json
+2020-06-08 13:06:37 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:09:07 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms1-20200608-111445.json
+2020-06-08 13:09:07 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:11:28 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms2-20200608-111445.json
+2020-06-08 13:11:28 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:13:36 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms3-20200608-111445.json
+2020-06-08 13:13:36 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:15:45 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms4-20200608-111445.json
+2020-06-08 13:15:45 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:17:55 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms5-20200608-111445.json
+2020-06-08 13:17:55 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:20:06 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms6-20200608-111445.json
+2020-06-08 13:20:06 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:22:19 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms7-20200608-111445.json
+2020-06-08 13:22:19 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:24:29 CARACal INFO: Saving flag summary in output/logs-20200608-111445/log-flag-flag__3-summary-ms8-20200608-111445.json
+2020-06-08 13:24:29 CARACal INFO: Saving flag summary plots in output/diagnostic_plots/V0-1547413577_sdp_l0-flag__3-flagging-summary-plots-0.html
+2020-06-08 13:24:29 CARACal INFO: flag: running
+2020-06-08 13:24:41 CARACal INFO: flag: finished
+2020-06-08 13:24:41 CARACal INFO: transform: initializing
+2020-06-08 13:24:42 CARACal INFO: transform: running
+2020-06-08 13:36:51 CARACal INFO: transform: finished
+2020-06-08 13:36:51 CARACal INFO: selfcal: initializing
+2020-06-08 15:28:27 CARACal INFO: Number of iterations reached: 2
+2020-06-08 15:28:27 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-08 15:28:27 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-08 15:28:27 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-08 15:28:27 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-09 01:25:58 CARACal INFO: Number of iterations reached: 2
+2020-06-09 01:26:02 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-09 01:26:02 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-09 01:26:02 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-09 01:26:02 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-09 11:09:39 CARACal INFO: Number of iterations reached: 2
+2020-06-09 11:09:39 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-09 11:09:39 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-09 11:09:39 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-09 11:09:39 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-09 21:08:00 CARACal INFO: Number of iterations reached: 2
+2020-06-09 21:08:00 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-09 21:08:00 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-09 21:08:00 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-09 21:08:00 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-10 06:56:53 CARACal INFO: Number of iterations reached: 2
+2020-06-10 06:56:56 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-10 06:56:56 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-10 06:56:56 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-10 06:56:56 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-10 17:00:51 CARACal INFO: Number of iterations reached: 2
+2020-06-10 17:01:02 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-10 17:01:02 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-10 17:01:02 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-10 17:01:02 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-11 02:58:33 CARACal INFO: Number of iterations reached: 2
+2020-06-11 02:58:34 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-11 02:58:34 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-11 02:58:34 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-11 02:58:34 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-11 12:50:23 CARACal INFO: Number of iterations reached: 2
+2020-06-11 12:50:24 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-11 12:50:24 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-11 12:50:24 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-11 12:50:24 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-11 22:22:15 CARACal INFO: Number of iterations reached: 2
+2020-06-11 22:22:17 CARACal INFO: Integration time of full-resolution data is: 7.996616972
+2020-06-11 22:22:17 CARACal INFO: Channel size of full-resolution data is: 208984.375
+2020-06-11 22:22:17 CARACal INFO: Integration time of averaged data is: 7.996616972
+2020-06-11 22:22:17 CARACal INFO: Channel size of averaged data is:1880859.375
+2020-06-11 22:59:02 CARACal INFO: selfcal: running
+2020-06-12 06:16:03 CARACal INFO: selfcal: finished
+2020-06-12 06:16:03 CARACal INFO: line: initializing
+2020-06-12 06:16:03 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R00C02_corr-obsinfo.json
+2020-06-12 06:16:03 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:03 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:03 CARACal INFO: Target RA, Dec for Doppler correction: 143.544 deg, -51.174 deg
+2020-06-12 06:16:03 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R00C04_corr-obsinfo.json
+2020-06-12 06:16:03 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:03 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:04 CARACal INFO: Target RA, Dec for Doppler correction: 142.398 deg, -50.501 deg
+2020-06-12 06:16:04 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R00C06_corr-obsinfo.json
+2020-06-12 06:16:04 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:04 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:04 CARACal INFO: Target RA, Dec for Doppler correction: 141.285 deg, -49.818 deg
+2020-06-12 06:16:04 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R01C01_corr-obsinfo.json
+2020-06-12 06:16:04 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:05 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:05 CARACal INFO: Target RA, Dec for Doppler correction: 143.594 deg, -51.871 deg
+2020-06-12 06:16:05 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R01C03_corr-obsinfo.json
+2020-06-12 06:16:05 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:05 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:05 CARACal INFO: Target RA, Dec for Doppler correction: 142.430 deg, -51.200 deg
+2020-06-12 06:16:05 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R01C05_corr-obsinfo.json
+2020-06-12 06:16:05 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:05 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:05 CARACal INFO: Target RA, Dec for Doppler correction: 141.300 deg, -50.516 deg
+2020-06-12 06:16:05 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R02C02_corr-obsinfo.json
+2020-06-12 06:16:05 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:06 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:06 CARACal INFO: Target RA, Dec for Doppler correction: 142.463 deg, -51.898 deg
+2020-06-12 06:16:06 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R02C04_corr-obsinfo.json
+2020-06-12 06:16:06 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:06 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:06 CARACal INFO: Target RA, Dec for Doppler correction: 141.316 deg, -51.215 deg
+2020-06-12 06:16:06 CARACal INFO: Updating info from output/obsinfo/1547413577_sdp_l0-T29R02C06_corr-obsinfo.json
+2020-06-12 06:16:06 CARACal INFO: MS has 1 spectral windows, with NCHAN=586
+2020-06-12 06:16:06 CARACal INFO: CHAN_FREQ from 1307824218.75 Hz to 1430080078.125 Hz with average channel width of 208984.375 Hz
+2020-06-12 06:16:06 CARACal INFO: Target RA, Dec for Doppler correction: 140.202 deg, -50.521 deg
+2020-06-12 06:16:10 CARACal INFO: Calculated common Doppler-corrected channel grid for all input .MS: 583 channels starting at 1307976527.477Hz and with channel width 208975.320Hz.
+2020-06-12 07:00:26 CARACal ERROR: string index out of range [IndexError]
+2020-06-12 07:00:26 CARACal INFO:   More information can be found in the logfile at output/logs-20200608-111445/log-caracal.txt
+2020-06-12 07:00:26 CARACal INFO:   You are running version 1.0.0
+2020-06-12 07:00:26 CARACal ERROR: Traceback (most recent call last):
+2020-06-12 07:00:26 CARACal ERROR:   File "/idia/projects/vela/CARACal_all/CARACal-18May2020/CARACal-venv-18May2020/lib/python3.7/site-packages/caracal/main.py", line 184, in __run
+2020-06-12 07:00:26 CARACal ERROR:     pipeline.run_workers()
+2020-06-12 07:00:26 CARACal ERROR:   File "/idia/projects/vela/CARACal_all/CARACal-18May2020/CARACal-venv-18May2020/lib/python3.7/site-packages/caracal/workers/worker_administrator.py", line 324, in run_workers
+2020-06-12 07:00:26 CARACal ERROR:     worker.worker(self, recipe, config)
+2020-06-12 07:00:26 CARACal ERROR:   File "/idia/projects/vela/CARACal_all/CARACal-18May2020/CARACal-venv-18May2020/lib/python3.7/site-packages/caracal/workers/line_worker.py", line 544, in worker
+2020-06-12 07:00:26 CARACal ERROR:     prefix = pipeline.prefix[i]
+2020-06-12 07:00:26 CARACal ERROR: IndexError: string index out of range
+2020-06-12 07:00:26 CARACal INFO: exiting with error code 1
